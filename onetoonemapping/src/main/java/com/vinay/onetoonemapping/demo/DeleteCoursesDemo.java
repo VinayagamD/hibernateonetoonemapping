@@ -15,7 +15,7 @@ import com.vinay.onetoonemapping.entity.InstructorDetail;
  * @author Dell
  *
  */
-public class CreateCoursesDemo {
+public class DeleteCoursesDemo {
 
 	/**
 	 * @param args
@@ -36,17 +36,15 @@ public class CreateCoursesDemo {
 			session.beginTransaction();
 
 			// get the instructor id from the db
-			int id = 4;
-			Instructor instructor = session.get(Instructor.class, id);
-			// create some courses
-			Course course1 = new Course("Air Guitar - The Ultimate Guide ");
-			Course course2 = new Course("The Pinball Masterclass ");
-			// add courses to instructor
-			instructor.add(course1);
-			instructor.add(course2);
-			// save the courses
-			session.save(course1);
-			session.save(course2);
+			int id = 10;
+			Course course = session.get(Course.class, id);
+			System.out.println("Course : "+course);
+
+			
+			// Delete the course
+						System.out.println("Deleting the course : " + course);
+						session.delete(course);
+			
 			// commit the transaction
 			session.getTransaction().commit();
 			System.out.println("Done !");

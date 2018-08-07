@@ -9,7 +9,6 @@ import org.hibernate.cfg.Configuration;
 
 import com.vinay.onetoonemapping.entity.Instructor;
 import com.vinay.onetoonemapping.entity.InstructorDetail;
-import com.vinay.onetoonemapping.entity.Student;
 
 
 /**
